@@ -95,6 +95,15 @@ public class BlockSignPost extends BlockTransparent {
         return false;
     }
 
+    public boolean canBeActivated() {
+        return false;
+    }
+
+    @Override
+    public boolean onActivate(Item item) {
+        return this.onActivate(item, null);
+    }
+
     @Override
     public int onUpdate(int type) {
         if (type == Level.BLOCK_UPDATE_NORMAL) {
